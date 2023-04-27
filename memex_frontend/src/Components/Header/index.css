@@ -1,0 +1,53 @@
+.header {
+    background-color: #121318;
+    color: white;
+    padding: 25px 0px;
+}
+
+.nav-button ul li {
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 32px;
+}
+
+.nav-button ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-button ul li a:hover,
+.nav-button ul li a:active,
+.nav-button ul li a:focus {
+    color: #5367FF;
+    border-bottom: 2px solid #5367FF;
+    padding-bottom: 45px;
+}
+
+.nav-button ul {
+    list-style-type: none;
+}
+
+.logo-part .v-line {
+    margin-left: 32px;
+    height: 50px;
+}
+
+.logo-part .v-line .d-flex {
+    margin-left: 32px;
+}
+
+.status {
+    width: 400px;
+}
+
+.status .v-line {
+    margin-left: 2px;
+    padding-left: 1px;
+}
+
+.status .main-button .label {
+    padding-left: 15px;
+}

@@ -1,0 +1,104 @@
+.footer {
+    background-color: #121318;
+    color: white;
+    padding: 60px 0px 25px 0px;
+}
+
+.container .col {
+    margin-top: 40px;
+}
+
+.container .col .row .title {
+    font-weight: bold;
+}
+
+.container .col .row .content {
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+.container .col .row .content .content-col {
+    margin-bottom: 15px !important;
+}
+
+.content ul li {
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.content ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.content ul li a:hover,
+.content ul li a:active,
+.content ul li a:focus {
+    color: #5367FF;
+}
+
+.content ul {
+    list-style-type: none;
+}
+
+.email .ant-input {
+    margin-right: 5px;
+    border: 1px solid rgba(138, 200, 255, 0.15);
+    border-radius: 5px;
+    background-color: #121318;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+
+    width: 300px;
+    height: 40px;
+}
+
+.email .ant-input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #AEB1BF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+}
+
+.email .ant-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    background: #5367FF;
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+}
+
+.newsletter .content .row {
+    margin-top: 50px;
+}
+
+.newsletter .main-button {
+    /* margin-left: 0px; */
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.copyright .content{
+    padding-top: 20px;
+}
+
+.copyright .content .v-line{
+    margin-left: 60px;
+}
+
+.copyright .content .v-line .row{
+    padding-left: 15px;
+}

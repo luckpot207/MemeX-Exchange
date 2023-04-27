@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+  
+}
+
+.container {
+  padding: 0 100px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.v-line {
+  border-left: solid #AEB1BF !important;
+  border-width: 0.1px !important;
+}
+
+.h-line {
+  border-top: solid #AEB1BF !important;
+  border-width: 0.1px !important;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  /* border-color:rgba(0, 0, 0, 0); */
+  border: none;
+  color: white;
+}
+
+.select {
+  background-color: rgba(0, 0, 0, 0);
+  /* border-color:rgba(0, 0, 0, 0); */
+  border: none;
+  color: white;
+}
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #080808;
+  border-color:rgba(0, 0, 0, 0);
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+}
+
+.main-button:hover {
+
+  color: #5367FF;
+}
+
+ul {
+  padding: 0px;
+}
