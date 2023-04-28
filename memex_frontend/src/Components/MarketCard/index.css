@@ -1,0 +1,74 @@
+.marketcard__container {
+    background: #080808;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+}
+
+.marketcard__container .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.marketcard__container .coin_name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.marketcard__container .price {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.marketcard__container-price {
+    margin-top: 10px;
+}
+
+.marketcard__container .chart-up {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #03A66D;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.marketcard__container .chart-up__svg svg {
+    color: #03A66D;
+}
+
+
+.marketcard__container .chart-down {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: red;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.marketcard__container .chart-down__svg svg {
+    color: red;
+}
+
+.marketcard__container .line-chart {
+    width: 100%;
+    height: 80px;
+}
+
+.marketcard__container .line-chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}

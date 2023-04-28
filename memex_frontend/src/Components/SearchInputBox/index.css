@@ -1,0 +1,29 @@
+.search__input-box {
+    width: 385px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.search__input-box .ant-input-affix-wrapper {
+    height: 100%;
+    border: 1px solid rgba(204, 206, 217, 0.15);
+    border-radius: 5px;
+    background: transparent;
+    color: #9295A6;
+}
+
+.search__input-box .ant-input-affix-wrapper:hover {
+    border: 1px solid rgba(204, 206, 217, 0.15);
+}
+
+.search__input-box input {
+    background: transparent;
+    color: #9295A6;
+}
+
+.search__input-box input::placeholder {
+    color: #9295A6;
+}
