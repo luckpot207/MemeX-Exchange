@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  
+
 }
 
 .container {
-  padding: 0 100px;
+  padding: 0 10px;
 }
 
 .d-flex {
@@ -29,6 +29,10 @@
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .v-line {
@@ -60,7 +64,7 @@
   justify-content: center;
   align-items: center;
   background-color: #080808;
-  border-color:rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
   padding: 12px;
   border-radius: 10px;
   color: white;
@@ -74,3 +78,76 @@
 ul {
   padding: 0px;
 }
+
+
+/*************************************/
+
+
+:where(.css-dev-only-do-not-override-zjzpde) .ant-menu-dark .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-zjzpde) .ant-menu-dark>.ant-menu .ant-menu-item-selected {
+  background: linear-gradient(90.2deg, #64C7C5 0.18%, #74C37B 98.56%);
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout .ant-layout-sider {
+  background-color: black;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu {
+  background: none;
+}
+
+.logo-img {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  max-width: 120px;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-item .ant-menu-item-icon,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-submenu-title .ant-menu-item-icon {
+  width: 20px;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-inline .ant-menu-item,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  padding: 30px
+}
+
+.ant-layout-sider {
+  width: max-content !important;
+  flex: 0 0 250px !important;
+  max-width: 250px !important;
+  min-width: 250px !important;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-item .ant-menu-item-icon+span,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-submenu-title .ant-menu-item-icon+span,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-item .anticon+span,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-submenu-title .anticon+span {
+  margin-inline-start: 5px;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-inline .ant-menu-item,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
+  padding-left: none;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-root.ant-menu-inline,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-root.ant-menu-vertical,
+:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical {
+  padding: 10px;
+}
+
+.ant-layout {
+  height: 100vh;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout, :where(.css-dev-only-do-not-override-zjzpde).ant-layout {
+  background: #343434;
+}
+

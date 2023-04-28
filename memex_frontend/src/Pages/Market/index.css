@@ -1,0 +1,141 @@
+/* .market .container {
+} */
+
+.coin-market {
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.market .ant-table-wrapper .ant-table {
+    background: none !important;
+}
+
+.market .ant-table-wrapper .ant-table .ant-table-cell {
+    background-color: none;
+}
+
+.market .table-row-transparent {
+    background-color: none;
+}
+
+.market .ant-table-wrapper .ant-table-thead>tr>th,
+.market .ant-table-wrapper .ant-table-thead>tr>th:hover,
+.market .ant-table-wrapper .ant-table-thead th.ant-table-column-sort {
+    color: white;
+    background-color: transparent;
+}
+
+.market .ant-tooltip-open {
+    background-color: transparent;
+}
+
+.market .ant-table-cell {
+    border-bottom: none !important;
+    color: white;
+}
+
+.market .ant-table-cell-row-hover {
+    background: black !important;
+    color: white;
+}
+
+.market .ant-table-wrapper td.ant-table-column-sort {
+    background: transparent;
+}
+
+.market .coin-mark {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px;
+    gap: 10px;
+    color: #0083F8;
+    width: 48px;
+    height: 23px;
+    background: #121318;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.market .coin-name {
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.market .coin-id {
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.market .ant-table-cell {
+    padding-left: 10px !important;
+}
+
+.market .ant-table-column-title {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.market .ant-table-thead {
+    border-top: solid white !important;
+    border-bottom: solid white !important;
+    border-width: 0.1px !important;
+}
+
+.market__first-container {
+    background-color: #121318;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.market__topic {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    /* identical to box height, or 122% */
+
+
+    /* Typography  / White */
+
+    color: #FFFFFF;
+}
+
+.market__explain {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9295A6;
+}
+
+.market p {
+    margin: 0px
+}
+
+.market__first-container__up {
+    margin-bottom: 20px;
+}
+
+.market .ant-pagination .ant-pagination-item-active {
+    background: transparent;
+}
+
+.market .coin-chart {
+    width: 150px;
+}

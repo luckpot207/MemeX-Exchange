@@ -1,0 +1,8 @@
+.financialChartPrice {
+    height: 500px;
+}
+
+.financialChartZoomSlider {
+    display: none;
+    height: 0px;
+}
