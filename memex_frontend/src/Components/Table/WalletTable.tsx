@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { commafy } from "../../Common/utils";
 import type { TableProps } from "antd";
 import { Table, Layout, Tabs, Button, Tag } from "antd";
 import type {
@@ -6,146 +7,94 @@ import type {
   FilterValue,
   SorterResult,
 } from "antd/es/table/interface";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import BuyIcon from "../assets/icons/buy.svg";
-import SellIcon from "../assets/icons/sell.svg";
+import BuyIcon from "../../assets/icons/buy.svg";
+import SellIcon from "../../assets/icons/sell.svg";
+import SearchInputBox from "../../Components/SearchInputBox";
+import DepositIcon from '../../assets/icons/deposite.svg';
+import WithDrawIcon from '../../assets/icons/withdraw.svg';
 
 const { Content } = Layout;
 
 interface DataType {
   key: string;
   pair: string;
-  currency: string;
-  cside: number;
+  balance: number;
+  locked: number;
   amount: number;
-  qty: number;
   dateData: string;
   status: number;
-  ctype: number;
-  price: number;
 }
 
 const data: DataType[] = [
   {
     key: "1",
     pair: "Bitcoin",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
+    balance: 97098,
+    locked: 0,
     amount: 10000,
-    qty: 0.001242,
     dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "2",
-    pair: "Ethereum",
-    cside: 1,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
+    pair: "Avalanche",
+    balance: 97098,
+    locked: 0,
     amount: 10000,
-    qty: 0.001242,
     dateData: "Feb 18, 2022",
     status: 0,
   },
+  
+  {
+    key: "1",
+    pair: "Bitcoin",
+    balance: 97098,
+    locked: 0,
+    amount: 10000,
+    dateData: "Feb 18, 2022",
+    status: 0,
+  },
+  
   {
     key: "3",
-    pair: "XRP",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
+    pair: "Bitcoin",
+    balance: 97098,
+    locked: 0,
     amount: 10000,
-    qty: 0.001242,
     dateData: "Feb 18, 2022",
     status: 0,
   },
+  
   {
     key: "4",
-    pair: "Solana",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
+    pair: "Bitcoin",
+    balance: 97098,
+    locked: 0,
     amount: 10000,
-    qty: 0.001242,
     dateData: "Feb 18, 2022",
     status: 0,
   },
+  
   {
     key: "5",
-    pair: "Tron",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
+    pair: "Bitcoin",
+    balance: 97098,
+    locked: 0,
     amount: 10000,
-    qty: 0.001242,
     dateData: "Feb 18, 2022",
     status: 0,
   },
+  
   {
     key: "6",
-    pair: "Avalance",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
-    amount: 10000,
-    qty: 0.001242,
-    dateData: "Feb 18, 2022",
-    status: 0,
-  },
-  {
-    key: "7",
-    pair: "Binance",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
-    amount: 10000,
-    qty: 0.001242,
-    dateData: "Feb 18, 2022",
-    status: 0,
-  },
-  {
-    key: "8",
     pair: "Bitcoin",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
+    balance: 97098,
+    locked: 0,
     amount: 10000,
-    qty: 0.001242,
     dateData: "Feb 18, 2022",
     status: 0,
   },
-  {
-    key: "9",
-    pair: "Bitcoin",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
-    amount: 10000,
-    qty: 0.001242,
-    dateData: "Feb 18, 2022",
-    status: 0,
-  },
-  {
-    key: "10",
-    pair: "Bitcoin",
-    cside: 0,
-    ctype: 0,
-    currency: "UST",
-    price: 439725,
-    amount: 10000,
-    qty: 0.001242,
-    dateData: "Feb 18, 2022",
-    status: 0,
-  },
+  
 ];
 
 const WalletTable: React.FC = () => {
@@ -165,6 +114,7 @@ const WalletTable: React.FC = () => {
   };
 
   const columns: ColumnsType<DataType> = [
+   
     {
       title: "Pair",
       dataIndex: "pair",
@@ -233,56 +183,28 @@ const WalletTable: React.FC = () => {
         </div>
       ),
     },
-
     {
-      title: "Side",
-      dataIndex: "cside",
-      key: "cside",
-      sorter: (a, b) => a.cside - b.cside,
-      sortOrder: sortedInfo.columnKey === "cside" ? sortedInfo.order : null,
+      title: "Avbi.Balance",
+      dataIndex: "balance",
+      key: "balance",
+      filteredValue: filteredInfo.price || null,
+      sorter: (a, b) => a.balance - b.balance,
+      sortOrder: sortedInfo.columnKey === "balance" ? sortedInfo.order : null,
       ellipsis: true,
-      render: (text) => (
-        <>
-          {text === 0 ? (
-            <div className="flex-items">
-              <img src={SellIcon} width={40} height={"100%"} />
-              <div className="flex-col">
-                <span>Sell</span>
-                <span style={{ color: "#6C7080" }}>18 Feb,2022 </span>
-              </div>
-            </div>
-          ) : (
-            <div className="flex-items ">
-              <img src={BuyIcon} width={40} height={"100%"} />
-              <div className="flex-col">
-                <span>Buy</span>
-                <span style={{ color: "#6C7080" }}>18 Feb,2022 </span>
-              </div>
-            </div>
-          )}
-        </>
-      ),
+      render: (text) => <p>$ {commafy(text)}</p>,
+      width: 200    
     },
     {
-      title: "Type",
-      dataIndex: "ctype",
-      key: "ctype",
+      title: "Locked",
+      dataIndex: "locked",
+      key: "locked",
       filteredValue: filteredInfo.ipaddress || null,
       //   onFilter: (value: string, record) => record.address.includes(value),
-      sorter: (a, b) => a.ctype - b.ctype,
-      sortOrder: sortedInfo.columnKey === "ctype" ? sortedInfo.order : null,
+      sorter: (a, b) => a.locked - b.locked,
+      sortOrder: sortedInfo.columnKey === "locked" ? sortedInfo.order : null,
       ellipsis: true,
-      render: (text) => <p>{text === 0 ? "Insta" : "noInsta"}</p>,
-    },
-    {
-      title: "Bought Price",
-      dataIndex: "price",
-      key: "price",
-      filteredValue: filteredInfo.price || null,
-      sorter: (a, b) => a.price - b.price,
-      sortOrder: sortedInfo.columnKey === "price" ? sortedInfo.order : null,
-      ellipsis: true,
-      render: (text) => <p>$ {text}</p>,
+      render: (text) => <p>{text}</p>,
+      width: 100
     },
     {
       title: "Amount",
@@ -292,45 +214,30 @@ const WalletTable: React.FC = () => {
       sorter: (a, b) => a.amount - b.amount,
       sortOrder: sortedInfo.columnKey === "amount" ? sortedInfo.order : null,
       ellipsis: true,
-      render: (text) => <p>$ {text}</p>,
+      render: (text) => <p>$ {commafy(text)}</p>,
+      width: 200
+
     },
     {
-      title: "Qty.Executed",
-      dataIndex: "qty",
-      key: "qty",
-      filteredValue: filteredInfo.qty || null,
-      sorter: (a, b) => a.qty - b.qty,
-      sortOrder: sortedInfo.columnKey === "qty" ? sortedInfo.order : null,
-      ellipsis: true,
-      render: (text) => <p>{text} BTC</p>,
-    },
-    {
-      title: "Status",
+      title: "Action",
       dataIndex: "status",
-      key: "status",
+      key: "ACTION",
       filteredValue: filteredInfo.status || null,
       sorter: (a, b) => a.status - b.status,
       sortOrder: sortedInfo.columnKey === "status" ? sortedInfo.order : null,
       ellipsis: true,
-      render: (text) => (
-        <div className="flex-end">
-          <div
-            style={{
-              color: "#03A66D",
-              background: "#080808",
-              borderRadius: "5px",
-              padding: "1px 12px 1px 12px",
-              fontSize: "16px",
-              width: "fit-content",
-            }}>
-            {text === 0 ? "Completed" : "Pending"}
-          </div>
+      render: (text) =>     
+      <div className="flex justify-between">
+        <div className="flex-items" style={{color: "#1677ff"}}>
+          <img src={DepositIcon} alt="" /> Deposite
         </div>
-      ),
-      align: "right",
-    },
-  ];
-
+    
+        <div className="flex-items"  style={{color: "#1677ff"}}>
+          <img src={WithDrawIcon} alt="" /> Withdrawn
+        </div>
+       </div>
+    }];
+  
   return (
     <>
       <Table columns={columns} dataSource={data} onChange={handleChange} />
