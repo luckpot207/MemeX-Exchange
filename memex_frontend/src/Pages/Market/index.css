@@ -91,8 +91,8 @@
     border-width: 0.1px !important;
 }
 
-.market .coin-market :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>th,
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>td {
+.market .coin-market .ant-table-wrapper .ant-table-thead>tr>th,
+.ant-table-wrapper .ant-table-thead>tr>td {
     border-bottom: 1px solid #6C7080 !important;
     border-top: 1px solid #6C7080 !important;
     border-radius: 0% !important;
@@ -145,7 +145,7 @@
     width: 150px;
 }
 
-.market :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-column-sorter {
+.market .ant-table-wrapper .ant-table-column-sorter {
     color: #6C7080 !important;
 }
 
@@ -233,13 +233,13 @@
     padding: 0px;
 } */
 
-.market .transactions :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>th,
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>td {
+.market .transactions .ant-table-wrapper .ant-table-thead>tr>th,
+.ant-table-wrapper .ant-table-thead>tr>td {
     border-radius: 0% !important;
 }
 
-.market :where(.css-dev-only-do-not-override-zjzpde).ant-input:focus,
-:where(.css-dev-only-do-not-override-zjzpde).ant-input-focused {
+.market .ant-input:focus,
+.ant-input-focused {
     border-bottom: #9295A6;
 }
 
@@ -254,8 +254,8 @@
     border-radius: 0% !important;
 }
 
-.transactions :where(.css-dev-only-do-not-override-zjzpde).ant-input:focus,
-:where(.css-dev-only-do-not-override-zjzpde).ant-input-focused {
+.transactions .ant-input:focus,
+.ant-input-focused {
     border-color: transparent;
     background: transparent;
     border-bottom: #6C7080 1px solid;

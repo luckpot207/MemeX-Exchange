@@ -39,8 +39,9 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Layout>
+        <Layout className='layout'>
           <Sider
+            className='sider'
             breakpoint="lg"
             collapsedWidth="0"
             onBreakpoint={(broken) => {

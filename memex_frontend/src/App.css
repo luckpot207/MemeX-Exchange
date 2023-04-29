@@ -90,17 +90,17 @@ ul {
 /*************************************/
 
 
-:where(.css-dev-only-do-not-override-zjzpde) .ant-menu-dark .ant-menu-item-selected,
-:where(.css-dev-only-do-not-override-zjzpde) .ant-menu-dark>.ant-menu .ant-menu-item-selected {
+ .ant-menu-dark .ant-menu-item-selected,
+ .ant-menu-dark>.ant-menu .ant-menu-item-selected {
   background: linear-gradient(90.2deg, #64C7C5 0.18%, #74C37B 98.56%);
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-layout .ant-layout-sider {
+.ant-layout .ant-layout-sider {
   background-color: black;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu {
+.ant-menu-dark,
+.ant-menu-dark>.ant-menu {
   background: none;
 }
 
@@ -110,13 +110,13 @@ ul {
   max-width: 120px;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-item .ant-menu-item-icon,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-submenu-title .ant-menu-item-icon {
+.ant-menu .ant-menu-item .ant-menu-item-icon,
+.ant-menu .ant-menu-submenu-title .ant-menu-item-icon {
   width: 20px;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-inline .ant-menu-item,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
+.ant-menu-dark.ant-menu-inline .ant-menu-item,
+.ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -131,22 +131,22 @@ ul {
   min-width: 250px !important;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-item .ant-menu-item-icon+span,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-submenu-title .ant-menu-item-icon+span,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-item .anticon+span,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu .ant-menu-submenu-title .anticon+span {
+.ant-menu .ant-menu-item .ant-menu-item-icon+span,
+.ant-menu .ant-menu-submenu-title .ant-menu-item-icon+span,
+.ant-menu .ant-menu-item .anticon+span,
+.ant-menu .ant-menu-submenu-title .anticon+span {
   margin-inline-start: 5px;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-inline .ant-menu-item,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
+.ant-menu-dark.ant-menu-inline .ant-menu-item,
+.ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
   padding-left: none;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-root.ant-menu-inline,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark.ant-menu-root.ant-menu-vertical,
-:where(.css-dev-only-do-not-override-zjzpde).ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical {
+.ant-menu-dark.ant-menu-root.ant-menu-inline,
+.ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-inline,
+.ant-menu-dark.ant-menu-root.ant-menu-vertical,
+.ant-menu-dark>.ant-menu.ant-menu-root.ant-menu-vertical {
   padding: 10px;
 }
 
@@ -154,12 +154,12 @@ ul {
   height: 100%;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-layout,
-:where(.css-dev-only-do-not-override-zjzpde).ant-layout {
+.ant-layout,
+.ant-layout {
   background: #343434;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-pagination .ant-pagination-item-active {
+.ant-pagination .ant-pagination-item-active {
   background-color: #12131800 !important;
 }
 
@@ -167,8 +167,8 @@ ul {
   background: #12131800 !important;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before,
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+.ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before,
+.ant-table-wrapper .ant-table-thead>tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
   background: #12131800 !important;
   background-color: #12131800 !important;
 }
@@ -194,7 +194,7 @@ ul {
   color: #6C7080;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: #1677ff;
   text-shadow: 0 0 0.25px currentcolor;
 }
@@ -225,16 +225,16 @@ ul {
   width: 10px;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>th,
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>td {
+.ant-table-wrapper .ant-table-thead>tr>th,
+.ant-table-wrapper .ant-table-thead>tr>td {
   background: transparent;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-cell-scrollbar:not([rowspan]) {
+.ant-table-wrapper .ant-table-cell-scrollbar:not([rowspan]) {
   box-shadow: transparent !important;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-cell-scrollbar:not([rowspan]) {
+.ant-table-wrapper .ant-table-cell-scrollbar:not([rowspan]) {
   box-shadow: 0 1px 0 1px #00000000;
 }
 

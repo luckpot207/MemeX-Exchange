@@ -286,7 +286,7 @@ const Market = () => {
                                             Lorem Ipsum is simply dummy text of the printing
                                         </p>
                                     </div>
-                                    <SearchInputBox place="Enter Meme coin name"/>
+                                    <SearchInputBox place="Enter Meme coin name" />
                                 </div>
                                 <div className="d-flex justify-between">
                                     <MarketCard
@@ -319,7 +319,7 @@ const Market = () => {
                                             Lorem Ipsum is simply dummy text of the printing.
                                         </p>
                                     </div>
-                                    <SearchInputBox place="Enter Meme coin name" width={40}/>
+                                    <SearchInputBox place="Enter Meme coin name" width={40} />
                                 </div>
                                 <div className="d-flex flex-row align-center justify-between ">
                                     <div className="d-flex flex-row align-center">
@@ -394,7 +394,7 @@ const Market = () => {
                             />
                         </div>
                         <div className="transactions d-flex flex-column justify-center">
-                            <Input placeholder="Recent Transactions"/>
+                            <Input placeholder="Recent Transactions" />
                             <Table
                                 columns={tranColumns}
                                 dataSource={tranData}
@@ -407,7 +407,6 @@ const Market = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 

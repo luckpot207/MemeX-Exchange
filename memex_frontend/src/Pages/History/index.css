@@ -32,7 +32,7 @@
     color: #6C7080;
 }
 
-.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-top >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-bottom >div>.ant-tabs-nav::before {
+.customize_table .ant-tabs-top >.ant-tabs-nav::before, .ant-tabs-bottom >.ant-tabs-nav::before, .ant-tabs-top >div>.ant-tabs-nav::before, .ant-tabs-bottom >div>.ant-tabs-nav::before {
     position: absolute;
     right: 0;
     left: 0;
@@ -45,7 +45,7 @@
     color: #ffffff !important;
 }
 
-.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-tbody >tr >th, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-tbody >tr >td {
+.customize_table .ant-table-wrapper .ant-table-tbody >tr >th, .ant-table-wrapper .ant-table-tbody >tr >td {
     border-bottom: 0px !important;
 }
 .customize_table .ant-table-thead tr th {
@@ -54,11 +54,11 @@
 }
 
 
-.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead th.ant-table-column-sort::before {
+.customize_table .ant-table-wrapper .ant-table-thead th.ant-table-column-sort::before {
     background-color: transparent!important;
 }
 
-.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+.customize_table .ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before, .ant-table-wrapper .ant-table-thead >tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
     
     background-color: #121318 !important;
 }
@@ -67,7 +67,7 @@
     margin-top: -16px;
 }
 
-.customize_table  :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>td {
+.customize_table  .ant-table-wrapper .ant-table-thead >tr>th, .ant-table-wrapper .ant-table-thead >tr>td {
     border-bottom: 1px solid #6C7080;
 }
 
@@ -75,7 +75,7 @@
     color: #9295A6 !important;
 }
 
-:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-column-sorter-up.active, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-column-sorter-down.active {
+.ant-table-wrapper .ant-table-column-sorter-up.active, .ant-table-wrapper .ant-table-column-sorter-down.active {
     color: #1677ff !important;
 }
 
@@ -83,7 +83,7 @@
 .customize_table .ant-pagination-item a{
     color: #6C7080 !important;
 }
-.customize_table  :where(.css-dev-only-do-not-override-zjzpde).ant-pagination .ant-pagination-item-active {
+.customize_table  .ant-pagination .ant-pagination-item-active {
     background-color: #121318 !important;
 }
 
