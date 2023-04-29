@@ -21,12 +21,7 @@ const list = [
   {
     key: '2',
     icon: Exchange,
-    label: 'Exchange',
-  },
-  {
-    key: '3',
-    icon: Governance,
-    label: 'Governance',
+    label: 'Wallet',
   },
   {
     key: '4',

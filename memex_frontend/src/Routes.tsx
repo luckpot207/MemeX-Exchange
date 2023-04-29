@@ -8,10 +8,10 @@ const RoutesComp = () => {
     return (
         <>
             <Routes>
+                <Route path="/" element={<Market/>}/>
                 <Route path="/Dashboard" element={<Market/>}/>
                 <Route path="/History" element={<History/>}/>
-                <Route path="/history" element={<History/>}/>
-                <Route path="/wallet" element={<Wallet/>}/>
+                <Route path="/Wallet" element={<Wallet/>}/>
                 
             </Routes>
         </>
