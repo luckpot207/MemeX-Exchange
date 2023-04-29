@@ -30,7 +30,7 @@ export const data = {
       label: "",
       pointBorderWidth: 0,
       pointHoverRadius: 0,
-      data: [3200, 100, -2400, 223, 1900, 112, -503],
+      data: [-1000, 3200, 1000, -2400, 1223, 1900, -1112, 1503],
       borderColor: "#25A1FF",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
       lineTension: 1,

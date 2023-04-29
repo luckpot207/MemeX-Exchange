@@ -9,8 +9,9 @@ const RoutesComp = () => {
         <>
             <Routes>
                 <Route path="/" element={<Market/>}/>
-                <Route path="/history" element={<History/>}/>
-                <Route path="/wallet" element={<Wallet/>}/>
+                <Route path="/Dashboard" element={<Market/>}/>
+                <Route path="/History" element={<History/>}/>
+                <Route path="/Wallet" element={<Wallet/>}/>
                 
             </Routes>
         </>

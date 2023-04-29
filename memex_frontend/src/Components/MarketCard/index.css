@@ -1,16 +1,16 @@
-.marketcard__container {
+.marketcard-container {
     background: #080808;
     border-radius: 8px;
     padding: 20px;
     width: 100%;
 }
 
-.marketcard__container .icon {
+.marketcard-container .icon {
     width: 30px;
     height: 30px;
 }
 
-.marketcard__container .coin_name {
+.marketcard-container .coin_name {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -19,7 +19,7 @@
     color: #FFFFFF;
 }
 
-.marketcard__container .price {
+.marketcard-container .price {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -28,11 +28,11 @@
     color: #FFFFFF;
 }
 
-.marketcard__container-price {
+.marketcard-container-price {
     margin-top: 10px;
 }
 
-.marketcard__container .chart-up {
+.marketcard-container .chart-up {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -43,12 +43,12 @@
     margin-right: 5px;
 }
 
-.marketcard__container .chart-up__svg svg {
+.marketcard-container .chart-up__svg svg {
     color: #03A66D;
 }
 
 
-.marketcard__container .chart-down {
+.marketcard-container .chart-down {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -59,16 +59,16 @@
     margin-right: 5px;
 }
 
-.marketcard__container .chart-down__svg svg {
+.marketcard-container .chart-down__svg svg {
     color: red;
 }
 
-.marketcard__container .line-chart {
+.marketcard-container .line-chart {
     width: 100%;
     height: 80px;
 }
 
-.marketcard__container .line-chart canvas {
+.marketcard-container .line-chart canvas {
     width: 100% !important;
     height: 100% !important;
 }

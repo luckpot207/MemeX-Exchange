@@ -7,7 +7,7 @@ import { ReactComponent as Exchange } from './assets/icons/exchange.svg';
 import { ReactComponent as Governance } from './assets/icons/governace.svg';
 import { ReactComponent as Dashboard } from './assets/icons/dashboard.svg';
 import { AppstoreOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -21,12 +21,12 @@ const list = [
   {
     key: '2',
     icon: Exchange,
-    label: 'Exchange',
+    label: 'Wallet',
   },
   {
-    key: '3',
+    key: '4',
     icon: Governance,
-    label: 'Governance',
+    label: 'History',
   },
 ]
 
@@ -61,7 +61,9 @@ const App = () => {
               theme="dark"
               mode="inline"
               defaultSelectedKeys={['1']}
-              children={list.map(item => <Menu.Item key={item.key} icon={<item.icon />} >{item.label}</Menu.Item>)}
+              children={list.map(item => <Menu.Item key={item.key} icon={<item.icon />} >
+                <Link to={`/${item.label}`}>{item.label}</Link>
+              </Menu.Item>)}
             />
           </Sider>
           <Layout>
