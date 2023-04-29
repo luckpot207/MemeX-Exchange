@@ -1,4 +1,4 @@
-import { Col, Row, Select, Table } from "antd";
+import { Button, Col, Input, Row, Select, Table, Tabs } from "antd";
 import type { ColumnsType, TablePaginationConfig } from 'antd/es/table';
 import type { FilterValue, SorterResult } from 'antd/es/table/interface';
 import qs from 'qs';
@@ -6,10 +6,17 @@ import { useEffect, useState } from "react";
 import { ReactComponent as Star } from '../../assets/icons/star.svg';
 import { ReactComponent as Bitcoin } from '../../assets/icons/bitcoin.svg';
 import { ReactComponent as Ethereum } from '../../assets/icons/ethereum.svg';
+import { ReactComponent as Calendar } from '../../assets/icons/calendar.svg';
+import { ReactComponent as Chart } from '../../assets/icons/pricechart.svg';
+import { ReactComponent as Expand } from '../../assets/icons/expand.svg';
+import { ReactComponent as Menu } from '../../assets/icons/menu.svg';
 import SearchInputBox from "../../Components/SearchInputBox";
 import MarketCard from "../../Components/MarketCard";
 import PriceChart from "../../Components/PriceChart";
 import SplineChart from "../../Components/SplineChart";
+import { RiseOutlined, FallOutlined } from "@ant-design/icons";
+import BTCCard from "../../Components/BTCCard";
+
 
 import "./index.css";
 
@@ -17,10 +24,16 @@ interface DataType {
     id: number;
     name: React.ReactNode;
     price: string;
-    equal: string;
+    equal: number;
     high: string;
     low: string;
     chart: string;
+}
+
+interface TranDataType {
+    name: React.ReactNode;
+    price: string;
+    equal: number;
 }
 
 interface TableParams {
@@ -29,6 +42,34 @@ interface TableParams {
     sortOrder?: string;
     filters?: Record<string, FilterValue>;
 }
+
+const tranColumns: ColumnsType<TranDataType> = [
+
+    {
+        title: 'Coin Name',
+        dataIndex: 'name',
+        sorter: true,
+        width: '',
+    },
+    {
+        title: 'Coin Price',
+        dataIndex: 'price',
+        sorter: (a, b) => parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1)),
+        width: '30%',
+    },
+    {
+        title: '24h',
+        dataIndex: 'equal',
+        sorter: (a, b) => a.equal - b.equal,
+        width: '25%',
+        render: (data, record, index) =>
+            <div className="coin-rise-fall d-flex align-center justify-start">
+                <p className="chart-down">+{data}%&nbsp;</p>
+                <RiseOutlined className="chart-down__svg" />
+            </div>
+
+    }
+];
 
 const columns: ColumnsType<DataType> = [
     {
@@ -53,8 +94,14 @@ const columns: ColumnsType<DataType> = [
     {
         title: '24h',
         dataIndex: 'equal',
-        sorter: true,
+        sorter: (a, b) => a.equal - b.equal,
         width: '10%',
+        render: (data, record, index) =>
+            <div className="coin-rise-fall d-flex align-center justify-start">
+                <p className="chart-down">+{data}%&nbsp;</p>
+                <RiseOutlined className="chart-down__svg" />
+            </div>
+
     },
     {
         title: '24h High',
@@ -73,7 +120,7 @@ const columns: ColumnsType<DataType> = [
         dataIndex: 'chart',
         sorter: true,
         width: '',
-        render: (data, record, index) => <div className="coin-chart d-flex align-center justify-between"><SplineChart/></div>
+        render: (data, record, index) => <div className="coin-chart d-flex align-center justify-between"><SplineChart /></div>
     },
 ];
 
@@ -88,7 +135,7 @@ const data: DataType[] = [
             </span>
         ),
         price: '$3,975.72',
-        equal: '+1.92%',
+        equal: +1.92,
         high: '$445',
         low: '$21',
         chart: 'chart'
@@ -103,7 +150,7 @@ const data: DataType[] = [
             </span>
         ),
         price: '$43,975.72',
-        equal: '+0.60%',
+        equal: +0.60,
         high: '$815,388',
         low: '$2',
         chart: 'chart'
@@ -118,10 +165,46 @@ const data: DataType[] = [
             </span>
         ),
         price: '$43,975.72',
-        equal: '+0.60%',
+        equal: -0.52,
         high: '$815,388',
         low: '$2',
         chart: 'chart'
+    },
+];
+
+const tranData: TranDataType[] = [
+    {
+        name: (
+            <span className="d-flex justify-start align-center">
+                <Bitcoin />
+                <div className="coin-name">Bitcoin</div>
+                <div className="coin-mark">BTC</div>
+            </span>
+        ),
+        price: '$3,975.72',
+        equal: +1.92,
+    },
+    {
+        name: (
+            <span className="d-flex justify-start align-center">
+                <Ethereum />
+                <div className="coin-name">Ethereum</div>
+                <div className="coin-mark">ETH</div>
+            </span>
+        ),
+        price: '$43,975.72',
+        equal: +0.60,
+    },
+    {
+        name: (
+            <span className="d-flex justify-start align-center">
+                <Ethereum />
+                <div className="coin-name">Ethereum</div>
+                <div className="coin-mark">ETH</div>
+            </span>
+        ),
+        price: '$43,975.72',
+        equal: -0.52,
     },
 ];
 
@@ -130,6 +213,12 @@ const getRandomuserParams = (params: TableParams) => ({
     page: params.pagination?.current,
     ...params,
 });
+
+const operations = (
+    <div style={{ color: "#9295A6", display: "flex", gap: "20px" }}>
+
+    </div>
+);
 
 
 const Market = () => {
@@ -186,14 +275,14 @@ const Market = () => {
     return (
         <div className="market">
             <div className="container">
-                <Row>
-                    <Col className="coin-market" span={18}>
-                        <Row>
-                            <div className="market__first-container">
-                                <div className="d-flex justify-between market__first-container__up">
-                                    <div>
-                                        <p className="market__topic">Meme Coins</p>
-                                        <p className="market__explain">
+                <div className="d-grid">
+                    <div className="coin-market">
+                        <div>
+                            <div className="market-first-container">
+                                <div className="d-flex justify-between market-first-container-up">
+                                    <div className="d-flex flex-column align-start">
+                                        <p className="market-topic">Meme Coins</p>
+                                        <p className="market-explain">
                                             Lorem Ipsum is simply dummy text of the printing
                                         </p>
                                     </div>
@@ -222,19 +311,38 @@ const Market = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="market__first-container">
-                                <div className="d-flex justify-between market__first-container__up">
-                                    <div>
-                                        <p className="market__topic">MemeX / USDT - 24 Hours</p>
-                                        <p className="market__explain">
+                            <div className="market-first-container">
+                                <div className="d-flex justify-between market-first-container-up">
+                                    <div className="d-flex flex-column align-start">
+                                        <p className="market-topic">MemeX / USDT - 24 Hours</p>
+                                        <p className="market-explain">
                                             Lorem Ipsum is simply dummy text of the printing.
                                         </p>
                                     </div>
                                     <SearchInputBox />
                                 </div>
+                                <div className="d-flex flex-row align-center justify-between ">
+                                    <div className="d-flex flex-row align-center">
+                                        <Button className="btn">Price</Button>
+                                        <Button className="btn">Market Cap</Button>
+                                        <Button className="btn">Trade View</Button>
+                                    </div>
+                                    <div className="d-flex flex-row align-center">
+                                        <div className="icon d-flex flex-row align-center">
+                                            <Calendar />
+                                            <select className="time-select">
+                                                <option>24h</option>
+                                                <option>12h</option>
+                                            </select>
+                                        </div>
+                                        <button className="icon"><Chart /></button>
+                                        <button className="icon"><Expand /></button>
+                                        <button className="icon"><Menu /></button>
+                                    </div>
+                                </div>
                                 <PriceChart />
                             </div>
-                        </Row>
+                        </div>
                         <Table
                             className="table-row-transparent"
                             rowClassName="table-row-transparent"
@@ -242,13 +350,61 @@ const Market = () => {
                             dataSource={data}
                             pagination={tableParams.pagination}
                             loading={loading}
-                            onChange={() => handleTableChange}
                         />
-                    </Col>
-                    <Col span={6}>
-                        col-6 col-pull-18
-                    </Col>
-                </Row>
+                    </div>
+                    <div>
+                        <div className="buy-sell-card d-flex justify-center">
+                            <Tabs
+                                className="tabs"
+                                tabBarExtraContent={operations}
+                                defaultActiveKey="1"
+                                style={{ marginTop: "-10px" }}
+                                items={[
+                                    {
+                                        label: "Buy BTC",
+                                        key: "1",
+                                        children: (
+                                            <div className="">
+                                                <BTCCard
+                                                    walletBalance={100}
+                                                    btcBalance={1000}
+                                                    quantity={300}
+                                                    buyOrSell={200}
+                                                    buy={true}
+                                                />
+                                            </div>
+                                        ),
+                                    },
+                                    {
+                                        label: "Sell BTC",
+                                        key: "2",
+                                        children: (
+                                            <div className="">
+                                                <BTCCard
+                                                    walletBalance={100}
+                                                    btcBalance={1000}
+                                                    quantity={300}
+                                                    buyOrSell={200}
+                                                    buy={false}
+                                                />
+                                            </div>
+                                        ),
+                                    },
+                                ]}
+                            />
+                        </div>
+                        <div className="transactions d-flex flex-column justify-center">
+                            <Input placeholder="Recent Transactions"/>
+                            <Table
+                                columns={tranColumns}
+                                dataSource={tranData}
+                                scroll={{ x: 'hidden', y: 'auto' }}
+                                pagination={false}
+                                loading={loading}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

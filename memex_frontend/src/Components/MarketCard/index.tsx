@@ -5,13 +5,13 @@ import "./index.css";
 
 const MarketCard = (props: IMarketCardProps) => {
   return (
-    <div className="marketcard__container">
+    <div className="marketcard-container">
       <div className="d-flex">
         <div>
           <div className="d-flex align-center">
             <p className="coin_name">{props.name}</p>
           </div>
-          <div className="d-flex marketcard__container-price align-center">
+          <div className="d-flex marketcard-container-price align-center">
             <p className="price">${commafy(props.price)}</p>
             {props.chart ? (
               <div className="d-flex">

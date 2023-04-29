@@ -2,7 +2,6 @@
 } */
 
 .coin-market {
-    padding: 20px;
     margin-right: 10px;
 }
 
@@ -78,7 +77,7 @@
     padding-left: 10px !important;
 }
 
-.market .ant-table-column-title {
+.market .coin-market .ant-table-column-title {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -86,22 +85,28 @@
     padding: 0px;
 }
 
-.market .ant-table-thead {
+.market .coin-market .ant-table-thead {
     border-top: solid white !important;
     border-bottom: solid white !important;
     border-width: 0.1px !important;
 }
 
-.market__first-container {
+.market .coin-market :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>th,
+:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>td {
+    border-bottom: 1px solid #6C7080 !important;
+    border-top: 1px solid #6C7080 !important;
+    border-radius: 0% !important;
+}
+
+.market-first-container {
     background-color: #121318;
     padding: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border-radius: 10px;
     width: 100%;
 }
 
-.market__topic {
+.market-topic {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -115,7 +120,7 @@
     color: #FFFFFF;
 }
 
-.market__explain {
+.market-explain {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -128,7 +133,7 @@
     margin: 0px
 }
 
-.market__first-container__up {
+.market-first-container-up {
     margin-bottom: 20px;
 }
 
@@ -139,3 +144,122 @@
 .market .coin-chart {
     width: 150px;
 }
+
+.market :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-column-sorter {
+    color: #6C7080 !important;
+}
+
+.market .coin-rise-fall {
+    color: #03A66D;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.market-first-container .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 30px;
+    background: #080808;
+    color: #6C7080;
+    border-radius: 5px;
+    border-color: transparent;
+    margin-right: 20px;
+}
+
+.market-first-container .btn:active,
+.market-first-container .btn:hover,
+.market-first-container .btn:focus {
+    background: #5367FF;
+    color: white;
+    border-color: transparent;
+}
+
+.market-first-container .icon {
+    background: transparent;
+    border-color: transparent;
+    height: 25px;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.market-first-container .time-select,
+.market-first-container .time-select:focus-visible {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: #9295A6;
+    margin-left: 5px;
+}
+
+.market .buy-sell-card {
+    background: #121318;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 50px;
+    margin-bottom: 20px;
+
+}
+
+.market .d-grid {
+    grid-template-columns: 75% 25%;
+}
+
+.market .ant-tabs {
+    width: 100%;
+}
+
+.market .ant-tabs-nav-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.market .transactions {
+    background: #121318;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 50px;
+}
+
+
+/* .market .coin-market .ant-table-column-title {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+} */
+
+.market .transactions :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>th,
+:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead>tr>td {
+    border-radius: 0% !important;
+}
+
+.market :where(.css-dev-only-do-not-override-zjzpde).ant-input:focus,
+:where(.css-dev-only-do-not-override-zjzpde).ant-input-focused {
+    border-bottom: #9295A6;
+}
+
+.transactions .ant-input,
+.transactions .ant-input:active,
+.transactions .ant-input:focus,
+.transactions .ant-input:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    border-bottom: #6C7080 1px solid;
+    color: #2B3144;
+    border-radius: 0% !important;
+}
+
+.transactions :where(.css-dev-only-do-not-override-zjzpde).ant-input:focus,
+:where(.css-dev-only-do-not-override-zjzpde).ant-input-focused {
+    border-color: transparent;
+    background: transparent;
+    border-bottom: #6C7080 1px solid;
+    color: white;
+    border-radius: 0% !important;
+}
+
