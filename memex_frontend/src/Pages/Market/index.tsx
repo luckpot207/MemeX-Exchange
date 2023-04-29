@@ -286,7 +286,7 @@ const Market = () => {
                                             Lorem Ipsum is simply dummy text of the printing
                                         </p>
                                     </div>
-                                    <SearchInputBox />
+                                    <SearchInputBox place="Enter Meme coin name"/>
                                 </div>
                                 <div className="d-flex justify-between">
                                     <MarketCard
@@ -319,7 +319,7 @@ const Market = () => {
                                             Lorem Ipsum is simply dummy text of the printing.
                                         </p>
                                     </div>
-                                    <SearchInputBox />
+                                    <SearchInputBox place="Enter Meme coin name" width={40}/>
                                 </div>
                                 <div className="d-flex flex-row align-center justify-between ">
                                     <div className="d-flex flex-row align-center">

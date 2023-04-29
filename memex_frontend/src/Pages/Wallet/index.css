@@ -1,0 +1,194 @@
+.w-full {
+    width: 100%;
+}
+
+.head-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-inherit {
+    justify-content: inherit !important;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.itmes-between {
+    align-content: space-between;
+}
+
+.flex-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.items-start {
+    align-items: start;
+}
+
+.items-end {
+    align-items: end;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-23 {
+    gap: 23px;
+}
+
+.gap-40 {
+    gap: 40px;
+}
+
+.gap-50 {
+    gap: 50px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+.headline {
+    font-style: normal;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+
+.customize__table .ant-table-thead tr th {
+    background: black;
+}
+
+.customize_table .ant-tabs-tab-btn {
+    color: #6C7080;
+}
+
+.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-top >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-zjzpde).ant-tabs-bottom >div>.ant-tabs-nav::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #6C7080 !important;
+    content: '';
+}
+
+.customize_table .ant-table {
+    background: #121318 !important;
+    color: #ffffff !important;
+}
+
+.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-tbody >tr >th, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-tbody >tr >td {
+    border-bottom: 0px !important;
+}
+.customize_table .ant-table-thead tr th {
+    background: #121318 !important;
+    color: #6C7080 !important;
+}
+
+
+.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead th.ant-table-column-sort::before {
+    background-color: transparent!important;
+}
+
+.customize_table :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    
+    background-color: #121318 !important;
+}
+
+.customize_table .ant-tabs-content-holder {
+    margin-top: -16px;
+}
+
+.customize_table  :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-thead >tr>td {
+    border-bottom: 1px solid #6C7080;
+}
+
+.customize_table .anticon {
+    color: #9295A6 !important;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-column-sorter-up.active, :where(.css-dev-only-do-not-override-zjzpde).ant-table-wrapper .ant-table-column-sorter-down.active {
+    color: #1677ff !important;
+}
+
+
+.customize_table .ant-pagination-item a{
+    color: #6C7080 !important;
+}
+.customize_table  :where(.css-dev-only-do-not-override-zjzpde).ant-pagination .ant-pagination-item-active {
+    background-color: #121318 !important;
+}
+
+.customize_table .ant-table-cell-ellipsis {
+    background: #121318 !important;
+}
+
+.count-asset {
+    margin-top: -60px;
+    position: absolute;
+    color: #6C7080;
+    font-size: 14px;
+}
+
+.btn-hover:hover .btn-hovericon {
+    color: #1677ff !important;
+}
+.btn-hover:hover {
+    color: #1677ff !important;
+}
+
+.walletinfo :where(.css-dev-only-do-not-override-zjzpde).ant-btn-default.ant-btn-background-ghost {
+    color: #6C7080 !important;
+    border-color: #6C7080 !important;
+}
+
+.walletinfo :where(.css-dev-only-do-not-override-zjzpde).ant-btn-default.ant-btn-background-ghost:hover {
+    color: #1677ff !important;
+    border-color: #1677ff !important;
+}
+
+.walletinfo :where(.css-dev-only-do-not-override-zjzpde).ant-layout-content {
+    flex: none !important; 
+}
+
+.paymentInfo .ant-select-selector {
+    background: #121318 !important;
+    height: 40px !important; 
+    border-color: #6C7080 !important;
+}
+
+.paymentInfo .ant-select-selector .ant-select-selection-item {
+    display: flex;
+    align-items: center ;
+    color: #ffffff !important;
+}
+
+.paymentInfo :where(.css-dev-only-do-not-override-zjzpde).ant-input {
+    background: #121318 !important;
+    color: #ffffff !important;
+    height: 40px!important;
+    border-color: #6C7080;
+    border-radius: 6px;
+}

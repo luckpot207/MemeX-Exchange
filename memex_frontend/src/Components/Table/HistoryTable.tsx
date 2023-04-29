@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 import type { TableProps } from "antd";
 import { Table, Layout, Tabs, Button, Tag } from "antd";
-import HistoryTable from "../../Components/Table/HistoryTable";
 import type {
   ColumnsType,
   FilterValue,
   SorterResult,
 } from "antd/es/table/interface";
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  CalendarOutlined,
-  DownOutlined,
-  FilterOutlined,
-  MoreOutlined,
-} from "@ant-design/icons";
-import "./index.css";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import BuyIcon from "../../assets/icons/buy.svg";
+import SellIcon from "../../assets/icons/sell.svg";
 
 const { Content } = Layout;
 
@@ -23,164 +16,139 @@ interface DataType {
   key: string;
   pair: string;
   currency: string;
-  action: number;
-  ipaddress: string;
+  cside: number;
   amount: number;
   qty: number;
   dateData: string;
   status: number;
+  ctype: number;
+  price: number;
 }
 
 const data: DataType[] = [
   {
     key: "1",
     pair: "Bitcoin",
-    currency: "BTC",
-    action: 1,
-    ipaddress: "182.179.16.31",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "2",
-    pair: "Solana",
-    currency: "SOL",
-    action: 2,
-    ipaddress: "182.179.16.31",
+    pair: "Ethereum",
+    cside: 1,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "3",
-    pair: "USD",
-    currency: "USDC",
-    action: 1,
-    ipaddress: "182.179.16.31",
+    pair: "XRP",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "4",
-    pair: "Ethereum",
-    currency: "ETH",
-    action: 0,
-    ipaddress: "182.179.16.31",
+    pair: "Solana",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "5",
-    pair: "XRP",
-    currency: "BTC",
-    action: 2,
-    ipaddress: "182.179.16.31",
+    pair: "Tron",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "6",
-    pair: "Binance",
-    currency: "BNB",
-    action: 0,
-    ipaddress: "182.179.16.31",
+    pair: "Avalance",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "7",
-    pair: "Bitcoin",
-    currency: "BTC",
-    action: 1,
-    ipaddress: "182.179.16.31",
+    pair: "Binance",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "8",
-    pair: "Solana",
-    currency: "SOL",
-    action: 1,
-    ipaddress: "182.179.16.31",
+    pair: "Bitcoin",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "9",
-    pair: "USD",
-    currency: "USDC",
-    action: 1,
-    ipaddress: "182.179.16.31",
+    pair: "Bitcoin",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
   {
     key: "10",
     pair: "Bitcoin",
-    currency: "BTC",
-    action: 1,
-    ipaddress: "182.179.16.31",
+    cside: 0,
+    ctype: 0,
+    currency: "UST",
+    price: 439725,
     amount: 10000,
     qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
-    status: 0,
-  },
-  {
-    key: "11",
-    pair: "Solana",
-    currency: "SOL",
-    action: 1,
-    ipaddress: "182.179.16.31",
-    amount: 10000,
-    qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
-    status: 0,
-  },
-  {
-    key: "12",
-    pair: "USD",
-    currency: "USDC",
-    action: 1,
-    ipaddress: "182.179.16.31",
-    amount: 10000,
-    qty: 0.001242,
-    dateData: "Feb 18, 2022 at 04:20PM",
+    dateData: "Feb 18, 2022",
     status: 0,
   },
 ];
 
-const operations = (
-  <div style={{ color: "#9295A6", display: "flex", gap: "20px" }}>
-    <div style={{cursor: "pointer"}} className="btn-hover">
-      <CalendarOutlined className="btn-hovericon" /> Month{" "}
-      <DownOutlined style={{ fontSize: "10px", marginLeft: "5px" }} className="btn-hovericon" />
-    </div>{" "}
-    <div style={{cursor: "pointer", marginRight: "-10px" }} className="btn-hover">
-      <FilterOutlined className="btn-hovericon"/> Filter{" "}
-      <DownOutlined style={{ fontSize: "10px", marginLeft: "5px" }} className="btn-hovericon"/>
-    </div>
-    <MoreOutlined style={{ fontSize: "25px" }} />
-  </div>
-);
-
-const History: React.FC = () => {
+const HistoryTable: React.FC = () => {
   const [filteredInfo, setFilteredInfo] = useState<
     Record<string, FilterValue | null>
   >({});
@@ -267,38 +235,54 @@ const History: React.FC = () => {
     },
 
     {
-      title: "Action",
-      dataIndex: "action",
-      key: "action",
-      sorter: (a, b) => a.action - b.action,
-      sortOrder: sortedInfo.columnKey === "action" ? sortedInfo.order : null,
+      title: "Side",
+      dataIndex: "cside",
+      key: "cside",
+      sorter: (a, b) => a.cside - b.cside,
+      sortOrder: sortedInfo.columnKey === "cside" ? sortedInfo.order : null,
       ellipsis: true,
       render: (text) => (
         <>
-          {" "}
-          {text === 1 ? (
+          {text === 0 ? (
             <div className="flex-items">
-              <MenuFoldOutlined style={{ fontSize: "20px" }} /> Deposite{" "}
+              <img src={SellIcon} width={40} height={"100%"} />
+              <div className="flex-col">
+                <span>Sell</span>
+                <span style={{ color: "#6C7080" }}>18 Feb,2022 </span>
+              </div>
             </div>
           ) : (
-            <div className="flex-items">
-              {" "}
-              <MenuUnfoldOutlined style={{ fontSize: "20px" }} /> WithDrawn{" "}
+            <div className="flex-items ">
+              <img src={BuyIcon} width={40} height={"100%"} />
+              <div className="flex-col">
+                <span>Buy</span>
+                <span style={{ color: "#6C7080" }}>18 Feb,2022 </span>
+              </div>
             </div>
-          )}{" "}
+          )}
         </>
       ),
     },
     {
-      title: "IP Address",
-      dataIndex: "ipaddress",
-      key: "ipaddress",
+      title: "Type",
+      dataIndex: "ctype",
+      key: "ctype",
       filteredValue: filteredInfo.ipaddress || null,
       //   onFilter: (value: string, record) => record.address.includes(value),
-      sorter: (a, b) => a.ipaddress.length - b.ipaddress.length,
-      sortOrder: sortedInfo.columnKey === "ipaddress" ? sortedInfo.order : null,
+      sorter: (a, b) => a.ctype - b.ctype,
+      sortOrder: sortedInfo.columnKey === "ctype" ? sortedInfo.order : null,
       ellipsis: true,
-      render: (text) => <p style={{ color: "#6C7080" }}>{text}</p>,
+      render: (text) => <p>{text === 0 ? "Insta" : "noInsta"}</p>,
+    },
+    {
+      title: "Bought Price",
+      dataIndex: "price",
+      key: "price",
+      filteredValue: filteredInfo.price || null,
+      sorter: (a, b) => a.price - b.price,
+      sortOrder: sortedInfo.columnKey === "price" ? sortedInfo.order : null,
+      ellipsis: true,
+      render: (text) => <p>$ {text}</p>,
     },
     {
       title: "Amount",
@@ -321,16 +305,6 @@ const History: React.FC = () => {
       render: (text) => <p>{text} BTC</p>,
     },
     {
-      title: "Date / Time",
-      dataIndex: "dateData",
-      key: "dateData",
-      filteredValue: filteredInfo.dateData || null,
-      sorter: (a, b) => a.dateData.length - b.dateData.length,
-      sortOrder: sortedInfo.columnKey === "dateData" ? sortedInfo.order : null,
-      ellipsis: true,
-      render: (text) => <p style={{ color: "#6C7080" }}>{text}</p>,
-    },
-    {
       title: "Status",
       dataIndex: "status",
       key: "status",
@@ -349,7 +323,7 @@ const History: React.FC = () => {
               fontSize: "16px",
               width: "fit-content",
             }}>
-            {text === 0 ? "Successful" : "Failed"}
+            {text === 0 ? "Completed" : "Pending"}
           </div>
         </div>
       ),
@@ -359,52 +333,10 @@ const History: React.FC = () => {
 
   return (
     <>
-      <Content
-        style={{
-          margin: "24px 16px",
-          padding: 24,
-          minHeight: 280,
-          background: "#121318",
-          borderRadius: "10px"
-        }}>
-        <div className="head-content ">
-          <p className="headline">Trade History</p>
-        </div>
-        <div className="customize_table">
-          <Tabs
-            tabBarExtraContent={operations}
-            defaultActiveKey="1"
-            style={{ marginTop: "-10px" }}
-            items={[
-              {
-                label: "Trade History",
-                key: "1",
-                children: (
-                  <div className="">
-                    <Table
-                      columns={columns}
-                      dataSource={data}
-                      onChange={handleChange}
-                    />
-                    <div className="count-asset">{data.length} assets </div>
-                  </div>
-                ),
-              },
-              {
-                label: "Wallet History",
-                key: "2",
-                children: (
-                  <div className="">
-                    <HistoryTable />
-                  </div>
-                ),
-              },
-            ]}
-          />
-        </div>
-      </Content>
+      <Table columns={columns} dataSource={data} onChange={handleChange} />
+      <div className="count-asset">{data.length} assets </div>
     </>
   );
 };
 
-export default History;
+export default HistoryTable;
