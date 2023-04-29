@@ -2,11 +2,11 @@ import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import "./index.css";
 
-const SearchInputBox = () => {
+const SearchInputBox = ({...props}) => {
   return (
     <div className="search__input-box">
       <Input
-        placeholder="Enter Meme coin name"
+        placeholder={props.place}
         prefix={<SearchOutlined className="site-form-item-icon" />}
       />
     </div>
